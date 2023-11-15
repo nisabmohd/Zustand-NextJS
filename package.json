@@ -21,6 +21,7 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
+    "uuid-generator-ts": "^1.1.0",
     "zustand": "^4.4.6"
   },
   "devDependencies": {

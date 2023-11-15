@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useTaskStore } from "@/store/todo";
 import { useState } from "react";
+import { UUID } from "uuid-generator-ts";
 
 export default function AddTaskInput() {
   // zustand store accessing action
@@ -9,7 +10,8 @@ export default function AddTaskInput() {
   const [input, setInput] = useState("");
 
   function handleAdd() {
-    addTask({ id: "123", name: input, status: "IN_PROGRESS" });
+    const uuid = new UUID();
+    addTask({ id: uuid.getDashFreeUUID(), name: input, status: "IN_PROGRESS" });
     setInput("");
   }
 
